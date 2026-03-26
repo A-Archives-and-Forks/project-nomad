@@ -93,6 +93,7 @@ router
     router.get('/jobs', [DownloadsController, 'index'])
     router.get('/jobs/:filetype', [DownloadsController, 'filetype'])
     router.delete('/jobs/:jobId', [DownloadsController, 'removeJob'])
+    router.post('/jobs/:jobId/cancel', [DownloadsController, 'cancelJob'])
   })
   .prefix('/api/downloads')
 
